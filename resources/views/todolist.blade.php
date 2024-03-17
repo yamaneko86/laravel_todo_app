@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  @vite('resources/css/app.css')
   <title>Document</title>
 </head>
 <body>
@@ -11,12 +12,10 @@
 <div>
     <h2>タスクの一覧</h2>
     <a href="/create-page">タスクを追加</a>
-    <table class="border-1">
+    <table class="border">
         <tr>
             <th>タスクの名前</th>
             <th>タスクの説明</th>
-            <th>担当者の名前</th>
-            <th>見積時間(h)</th>
             <th colspan="2">操作</th>
         </tr>
         @foreach($todos as $todo)
