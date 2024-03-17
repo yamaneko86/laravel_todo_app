@@ -12,6 +12,6 @@ class TodolistFormController extends Controller
     public function index(): View
     {
         $todos = Todo::orderBy('id', 'asc')->get();
-        return view('todolist', ["todos" => $todos]);
+        return view('todolist', ['todos' => $todos]);
     }
 }
