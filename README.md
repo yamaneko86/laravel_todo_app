@@ -1,6 +1,7 @@
 ## メモ
 
 ・名前空間は「大文字とキャメルケース（CamelCase）」が一般的
+
 ・ディレクトリは "app/Http/Controllers"でも、名前空間は "App\Http\Controllers"と書く必要がある。
 
 ## 各サーバーの起動コマンド
