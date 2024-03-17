@@ -2,23 +2,23 @@
 
 ・名前空間は「大文字とキャメルケース（CamelCase）」が一般的
 
-・ディレクトリは "app/Http/Controllers"でも、名前空間は "App\Http\Controllers"と書く必要がある。
+・ディレクトリは "app/Http/Controllers"でも、名前空間は "<font color="Red">A</font>pp\Http\Controllers"と書く必要がある。
 
 ## 各サーバーの起動コマンド
 
-# Laravel
+### Laravel
 
 ```
 php artisan serve
 ```
 
-# Vite(Tailwind CSS)
+### Vite(Tailwind CSS)
 
 ```
 npm run dev
 ```
 
-# MySQL
+### MySQL
 
 ```
 mysql.server start
