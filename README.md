@@ -2,7 +2,7 @@
 
 ・名前空間は「大文字とキャメルケース（CamelCase）」が一般的
 
-・ディレクトリは "app/Http/Controllers"でも、名前空間は "**A**pp\Http\Controllers"と書く必要がある。
+・ディレクトリは "app/Http/Controllers"でも、名前空間は "`A`pp\Http\Controllers"と書く必要がある。
 
 ## 各サーバーの起動コマンド
 
