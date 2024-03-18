@@ -8,25 +8,34 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>ToDo List</h1>
-<div>
-    <h2>タスクの一覧</h2>
-    <a href="/create-page">タスクを追加</a>
-    <table class="border">
-        <tr>
-            <th>タスクの名前</th>
-            <th>タスクの説明</th>
-            <th colspan="2">操作</th>
-        </tr>
-        @foreach($todos as $todo)
-        <tr>
-            <td>{{$todo->task_name}}</td>
-            <td>{{$todo->task_description}}</td>
-            <td><a href="/edit-page/{{$todo->id}}">編集</a></td>
-            <td><a href="/delete-page/{{$todo->id}}">削除</a></td>
-        </tr>
-        @endforeach
-    </table>
+  <div class="p-6">
+    <h1 class="text-3xl font-bold mb-4">ToDo List</h1>
+    <div class="mb-4">
+        <h2 class="text-xl font-semibold mb-2">タスクの一覧</h2>
+        <a href="/create-page" class="text-blue-500 hover:underline">タスクを追加</a>
+    </div>
+    <div class="overflow-x-auto">
+        <table class="w-full border-collapse border">
+            <thead>
+                <tr>
+                    <th class="py-2 px-4 bg-gray-200 border">タスクの名前</th>
+                    <th class="py-2 px-4 bg-gray-200 border">タスクの説明</th>
+                    <th class="py-2 px-4 bg-gray-200 border" colspan="2">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($todos as $todo)
+                <tr>
+                    <td class="py-2 px-4 border">{{$todo->task_name}}</td>
+                    <td class="py-2 px-4 border">{{$todo->task_description}}</td>
+                    <td class="py-2 px-4 border"><a href="/edit-page/{{$todo->id}}" class="text-blue-500 hover:underline">編集</a></td>
+                    <td class="py-2 px-4 border"><a href="/delete-page/{{$todo->id}}" class="text-red-500 hover:underline">削除</a></td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 </div>
+
 </body>
 </html>
