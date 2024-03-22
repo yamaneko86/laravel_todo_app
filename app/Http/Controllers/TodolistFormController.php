@@ -26,7 +26,21 @@ class TodolistFormController extends Controller
         $todo->task_name = $request->task_name;
         $todo->task_description = $request->task_description;
         $todo->save();
-        $todos = Todo::orderBy('id')->get();
-        return view('todolist', ['todos' => $todos]);
+        return redirect('/');
+    }
+
+    public function editPage($id)
+    {
+        $todo = Todo::find($id);
+        return view('todo_edit', ['todo' => $todo]);
+    }
+
+    public function edit(Request $request)
+    {
+        Todo::find($request->id)->update([
+            'task_name' => $request->task_name,
+            'task_description' => $request->task_description
+        ]);
+        return redirect('/');
     }
 }
