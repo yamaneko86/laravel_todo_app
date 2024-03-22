@@ -11,7 +11,7 @@
 
 <body>
   <div class="p-6">
-    <h1 class="text-3xl font-bold mb-4">Todo create</h1>
+    <h1 class="text-3xl font-bold mb-4">Todo Create</h1>
     <form method="POST" action="/create" class="mb-4">
       @csrf
       <div class="mb-4">

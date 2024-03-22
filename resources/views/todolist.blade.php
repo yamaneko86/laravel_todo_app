@@ -11,7 +11,7 @@
 
 <body>
   <div class="p-6">
-    <h1 class="text-3xl font-bold mb-4">ToDo List</h1>
+    <h1 class="text-3xl font-bold mb-4">Todo List</h1>
     <div class="mb-4">
       <h2 class="text-xl font-semibold mb-2">タスクの一覧</h2>
       <a href="/create-page" class="text-blue-500 hover:underline">タスクを追加</a>
