@@ -29,7 +29,7 @@ class TodolistFormController extends Controller
         return redirect('/');
     }
 
-    public function editPage($id)
+    public function editPage($id): View
     {
         $todo = Todo::find($id);
         return view('todo_edit', ['todo' => $todo]);
@@ -41,6 +41,18 @@ class TodolistFormController extends Controller
             'task_name' => $request->task_name,
             'task_description' => $request->task_description
         ]);
+        return redirect('/');
+    }
+
+    public function deletePage($id): View
+    {
+        $todo = Todo::find($id);
+        return view('todo_delete', ['todo' => $todo]);
+    }
+
+    public function delete($id)
+    {
+        Todo::find($id)->delete();
         return redirect('/');
     }
 }
