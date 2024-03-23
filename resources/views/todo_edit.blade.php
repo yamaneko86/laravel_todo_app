@@ -14,9 +14,8 @@
     <h1 class="text-3xl font-bold mb-4">Todo Edit</h1>
     <div>
       <h2 class="text-xl font-semibold mb-2">タスクの修正</h2>
-      <form method="POST" action="/edit" class="mb-4">
+      <form method="POST" action="/edit/{{ $todo->id }}" class="mb-4">
         @csrf
-        <input type="hidden" name="id" value="{{ $todo->id }}">
         <div class="mb-4">
           <label for="task_name" class="block text-sm font-medium text-gray-700">タスクの名前：</label>
           <input type="text" name="task_name" value="{{ $todo->task_name }}" id="task_name"
