@@ -20,19 +20,19 @@
       <table class="w-full border-collapse border">
         <thead>
           <tr>
-            <th class="py-2 px-4 bg-gray-200 border">タスクの名前</th>
-            <th class="py-2 px-4 bg-gray-200 border">タスクの説明</th>
-            <th class="py-2 px-4 bg-gray-200 border" colspan="2">操作</th>
+            <th class="py-2 px-4 bg-orange-200 border border-black text-left">タスクの名前</th>
+            <th class="py-2 px-4 bg-orange-200 border border-black text-left">タスクの説明</th>
+            <th class="py-2 px-4 bg-orange-200 border border-black text-left" colspan="2">操作</th>
           </tr>
         </thead>
         <tbody>
           @foreach ($todos as $todo)
             <tr>
-              <td class="py-2 px-4 border">{{ $todo->task_name }}</td>
-              <td class="py-2 px-4 border">{{ $todo->task_description }}</td>
-              <td class="py-2 px-4 border"><a href="/edit-page/{{ $todo->id }}"
+              <td class="py-2 px-4 border border-black">{{ $todo->task_name }}</td>
+              <td class="py-2 px-4 border border-black">{{ $todo->task_description }}</td>
+              <td class="py-2 px-4 border border-black"><a href="/edit-page/{{ $todo->id }}"
                   class="text-blue-500 hover:underline">編集</a></td>
-              <td class="py-2 px-4 border"><a href="/delete-page/{{ $todo->id }}"
+              <td class="py-2 px-4 border border-black"><a href="/delete-page/{{ $todo->id }}"
                   class="text-red-500 hover:underline">削除</a></td>
             </tr>
           @endforeach
